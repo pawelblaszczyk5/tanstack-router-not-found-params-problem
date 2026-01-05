@@ -23,7 +23,9 @@ const RootComponent = () => {
             Visit bar
           </Link>
           {/* @ts-expect-error -- just for the sake of presenting error */}
-          <Link href="/lorem">Visit weird page?</Link>
+          <Link to="/{$param}" params={{ param: "lorem" }}>
+            Visit weird page?
+          </Link>
         </nav>
         <Outlet></Outlet>
         <Scripts />
