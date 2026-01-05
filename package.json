@@ -1,0 +1,29 @@
+{
+  "name": "different-root-per-layout-reproduction",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --port 3000",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.6",
+    "@tanstack/react-router": "^1.144.0",
+    "@tanstack/react-start": "^1.145.5",
+    "nitro": "latest",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "devDependencies": {
+    "@tanstack/devtools-vite": "^0.3.11",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "typescript": "^5.7.2",
+    "vite": "^7.1.7"
+  }
+}

@@ -1,0 +1,16 @@
+import { createFileRoute, notFound } from "@tanstack/react-router";
+
+export const Route = createFileRoute("/{-$param}")({
+  component: RouteComponent,
+  params: {
+    parse: (rawParams) => {
+      if (rawParams.param === "lol") throw notFound();
+
+      return rawParams;
+    },
+  },
+});
+
+function RouteComponent() {
+  return <div>Hello "/$param"!</div>;
+}
