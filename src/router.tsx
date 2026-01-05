@@ -8,7 +8,6 @@ export const getRouter = () => {
   const router = createRouter({
     routeTree,
     scrollRestoration: true,
-    defaultNotFoundComponent: () => <h1>Bla</h1>,
   });
 
   return router;

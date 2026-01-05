@@ -9,50 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as Char123ParamChar125RouteImport } from './routes/{-$param}'
+import { Route as Char123paramChar125RouteImport } from './routes/{$param}'
 
-const Char123ParamChar125Route = Char123ParamChar125RouteImport.update({
-  id: '/{-$param}',
-  path: '/{-$param}',
+const Char123paramChar125Route = Char123paramChar125RouteImport.update({
+  id: '/{$param}',
+  path: '/{$param}',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/{-$param}': typeof Char123ParamChar125Route
+  '/{$param}': typeof Char123paramChar125Route
 }
 export interface FileRoutesByTo {
-  '/{-$param}': typeof Char123ParamChar125Route
+  '/{$param}': typeof Char123paramChar125Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/{-$param}': typeof Char123ParamChar125Route
+  '/{$param}': typeof Char123paramChar125Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/{-$param}'
+  fullPaths: '/{$param}'
   fileRoutesByTo: FileRoutesByTo
-  to: '/{-$param}'
-  id: '__root__' | '/{-$param}'
+  to: '/{$param}'
+  id: '__root__' | '/{$param}'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  Char123ParamChar125Route: typeof Char123ParamChar125Route
+  Char123paramChar125Route: typeof Char123paramChar125Route
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/{-$param}': {
-      id: '/{-$param}'
-      path: '/{-$param}'
-      fullPath: '/{-$param}'
-      preLoaderRoute: typeof Char123ParamChar125RouteImport
+    '/{$param}': {
+      id: '/{$param}'
+      path: '/{$param}'
+      fullPath: '/{$param}'
+      preLoaderRoute: typeof Char123paramChar125RouteImport
       parentRoute: typeof rootRouteImport
     }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  Char123ParamChar125Route: Char123ParamChar125Route,
+  Char123paramChar125Route: Char123paramChar125Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
